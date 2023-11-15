@@ -1,0 +1,45 @@
+<script>
+  document.getElementById("btndangnhap").disabled=true; function daoNutDN(){ 
+    var u = document.getElementById("username").value; 
+    var p = document.getElementById("password").value; 
+    if (u.length>0 && p.length>0) document.getElementById("btndangnhap").disabled=false; 
+    else document.getElementById("btndangnhap").disabled=true; 
+  }
+</script>
+<form id="signin" class="form_login" method="POST" action="/signin">
+  <p>
+    <label>Tên đăng nhập</label>
+    <input
+      type="text"
+      class="txt"
+      id="username"
+      name="username"
+      placeholder="Nhập 6-20 ký tự"
+      onkeyup="daoNutDN()"
+      autocomplete="off"
+      autofocus
+    />
+  </p>
+  <p>
+    <label>Mật khẩu</label>
+    <input
+      type="password"
+      class="txt"
+      id="password"
+      name="password"
+      placeholder="Mật khẩu"
+      onkeyup="daoNutDN()"
+      autocomplete="off"
+      autofocus
+    />
+  </p>
+  <p>
+    <label></label>
+    <button type="submit" name="btndangnhap" id="btndangnhap" value="nut">
+      Đăng nhập
+    </button>
+    <button>
+      <a href="/signup">Đăng ký</a>
+    </button>
+  </p>
+</form>

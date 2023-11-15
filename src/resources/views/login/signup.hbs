@@ -1,0 +1,70 @@
+<script>
+  document.getElementById("btndangky").disabled=true; function daoNutDN(){ 
+    var u = document.getElementById("username").value; 
+    var p = document.getElementById("password").value; 
+    //var m = document.getElementById("repeatpassword").value;
+    var n = document.getElementById("email").value; 
+    if (u.length>0 && p.length>0 && n.length>0) document.getElementById("btndangky").disabled=false;
+    else document.getElementById("btndangky").disabled=true; 
+  }
+</script>
+<form id="signup" class="form_login" method="POST" action="/signup">
+  <p>
+    <label>Tên đăng nhập</label>
+    <input
+      type="text"
+      class="txt"
+      id="username"
+      name="username"
+      placeholder="Nhập 6-20 ký tự"
+      onkeyup="daoNutDN()"
+      autocomplete="off"
+      autofocus
+    />
+  </p>
+  <p>
+    <label>Mật khẩu</label>
+    <input
+      type="password"
+      class="txt"
+      id="password"
+      name="password"
+      placeholder="Mật khẩu"
+      onkeyup="daoNutDN()"
+      autocomplete="off"
+      autofocus
+    />
+  </p>
+  {{!-- <p>
+    <label>Xác nhận mật khẩu</label>
+    <input
+      type="password"
+      class="txt"
+      id="repeatpassword"
+      name="repeatpassword"
+      placeholder="Xác nhận mật khẩu"
+      onkeyup="daoNutDN()"
+      autocomplete="off"
+      autofocus
+    />
+  </p> --}}
+  <p>
+    <label>Email</label>
+    <input
+      type="text"
+      class="txt"
+      id="email"
+      name="email"
+      placeholder="Email được sử dụng khi quên mật khẩu"
+      onkeyup="daoNutDN()"
+      autocomplete="off"
+      autofocus
+    />
+  </p>
+  <p>
+    <label></label>
+    <button type="submit" name="btndangky" id="btndangky" value="nut">
+      Đăng ký
+    </button>
+  </p>
+</form>

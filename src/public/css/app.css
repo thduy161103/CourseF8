@@ -1,0 +1,36 @@
+.card-img-top {
+  width: 415px;
+  height: 300px; }
+
+.card-course-item {
+  margin-top: 16px; }
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 4px; }
+
+.form_login {
+  width: 600px;
+  margin: auto;
+  border: 2px solid darkslategrey;
+  padding: 10px; }
+
+.form_login label {
+  color: darkslategray;
+  width: 120px;
+  display: inline-block; }
+
+.form_login .txt {
+  width: 450px;
+  padding: 8px;
+  border: 1px solid lightcoral; }
+
+.form_login button {
+  width: 120px;
+  height: 40px; }
+
+.btn_ {
+  display: flex;
+  justify-content: center; }
